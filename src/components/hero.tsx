@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import SimWaveAnimation from "@/components/sim-wave-animation";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
@@ -20,11 +21,11 @@ export default function Hero() {
 
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
-          <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6">
-            <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-foreground">
-              Discover Operator Products
-            </h1>
-            <p className="mt-4 max-w-[600px] text-foreground/80 md:text-xl break-words">
+          <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-foreground">
+            Discover Operator Products
+          </h1>
+          <div className="mt-6 max-w-[700px] bg-black/20 backdrop-blur-sm rounded-xl p-6">
+            <p className="max-w-[600px] text-foreground/80 md:text-xl break-words mx-auto">
               All your favorite telecom products from MPT, Ooredoo, Atom, and MyTel in one place. Instantly top-up data, minutes, and more.
             </p>
             <div className="mt-8">
