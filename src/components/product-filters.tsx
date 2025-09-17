@@ -30,9 +30,9 @@ const FilterButton = ({ label, isSelected, onClick }: FilterButtonProps) => (
         : "bg-card/50 text-muted-foreground hover:bg-card hover:text-foreground hover:ring-primary/50"
     )}
   >
-    {!isSelected && <Diamond className="w-3 h-3 text-muted-foreground/50" />}
+    <Diamond className={cn("w-3 h-3 text-muted-foreground/50", isSelected && 'invisible')} />
     {label}
-    {!isSelected && <Diamond className="w-3 h-3 text-muted-foreground/50" />}
+    <Diamond className={cn("w-3 h-3 text-muted-foreground/50", isSelected && 'invisible')} />
   </button>
 );
 
