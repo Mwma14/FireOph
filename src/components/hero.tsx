@@ -16,10 +16,10 @@ export default function Hero() {
 
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline bg-clip-text text-transparent bg-gradient-to-br from-neutral-200 to-neutral-500">
+          <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-foreground">
             Discover Operator Products
           </h1>
-          <p className="mt-4 max-w-[600px] text-muted-foreground md:text-xl break-words">
+          <p className="mt-4 max-w-[600px] text-foreground/80 md:text-xl break-words">
             All your favorite telecom products from MPT, Ooredoo, Atom, and MyTel in one place. Instantly top-up data, minutes, and more.
           </p>
           <div className="mt-8">
