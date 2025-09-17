@@ -24,13 +24,15 @@ export default function PageHeader() {
             </div>
         </div>
 
-        <div className="flex items-center space-x-2 md:space-x-4">
+        <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon" className="md:hidden">
               <Search />
               <span className="sr-only">Search</span>
             </Button>
             <div className="hidden md:flex items-center space-x-4">
               <Button variant="ghost">Sign In</Button>
+            </div>
+            <div className="hidden md:flex">
               <Button>Join Now</Button>
             </div>
             <div className="md:hidden">
