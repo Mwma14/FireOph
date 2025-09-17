@@ -16,8 +16,8 @@ export default function ProductCard({ product, isSelected, onSelect }: ProductCa
     <Card 
       onClick={onSelect}
       className={cn(
-        "cursor-pointer relative h-full w-full flex flex-col justify-between bg-card hover:border-primary/20 transition-colors duration-300 shadow-lg border border-border/50 rounded-2xl overflow-hidden",
-        isSelected && "border-primary/20"
+        "cursor-pointer relative h-full w-full flex flex-col justify-between bg-card hover:border-primary/20 transition-all duration-300 shadow-lg border border-border/50 rounded-2xl overflow-hidden",
+        isSelected && "border-primary/20 bg-card/50 shadow-primary/20"
       )}
     >
       <div 
