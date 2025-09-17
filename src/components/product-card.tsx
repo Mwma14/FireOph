@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="group [perspective:1000px]">
+    <div className="group [perspective:1000px] h-[280px] sm:h-auto">
       <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front Face */}
         <div className="absolute inset-0 [backface-visibility:hidden]">
@@ -19,10 +19,10 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <OperatorLogo operator={product.operator} />
                 <div className="text-sm font-semibold text-primary">{product.category}</div>
               </div>
-              <CardTitle className="pt-4 text-xl">{product.name}</CardTitle>
+              <CardTitle className="pt-4 text-lg sm:text-xl">{product.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-3xl font-bold font-headline text-primary">{product.price.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">MMK</span></p>
+              <p className="text-2xl sm:text-3xl font-bold font-headline text-primary">{product.price.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">MMK</span></p>
             </CardContent>
             <CardFooter>
               <Button variant="ghost" className="w-full text-muted-foreground">View Details</Button>
@@ -34,11 +34,11 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="absolute inset-0 h-full w-full rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]">
           <Card className="h-full w-full flex flex-col justify-between bg-card border-primary/50">
             <CardHeader>
-              <CardTitle>{product.name}</CardTitle>
-              <CardDescription className="pt-2">{product.description}</CardDescription>
+              <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
+              <CardDescription className="pt-2 text-xs sm:text-sm">{product.description}</CardDescription>
             </CardHeader>
             <CardContent>
-               <p className="text-3xl font-bold font-headline text-primary">{product.price.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">MMK</span></p>
+               <p className="text-2xl sm:text-3xl font-bold font-headline text-primary">{product.price.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">MMK</span></p>
             </CardContent>
             <CardFooter>
               <Button className="w-full">Buy Now</Button>

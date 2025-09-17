@@ -25,7 +25,7 @@ export default function ProductFilters({
       <div className="flex flex-col gap-2 items-center">
         <h3 className="text-lg font-semibold text-muted-foreground">Filter by Operator</h3>
         <Tabs value={selectedOperator} onValueChange={(value) => onSelectOperator(value as Operator | 'All')}>
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
+          <TabsList className="grid w-full grid-cols-3 sm:grid-cols-5">
             <TabsTrigger value="All">All</TabsTrigger>
             {operators.map(op => (
               <TabsTrigger key={op} value={op}>{op}</TabsTrigger>
