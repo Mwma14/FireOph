@@ -7,13 +7,25 @@ import { cn } from "@/lib/utils";
 
 interface ProductCardProps {
   product: Product;
+  isSelected: boolean;
+  onSelect: () => void;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, isSelected, onSelect }: ProductCardProps) {
   return (
-    <Card className="relative h-full w-full flex flex-col justify-between bg-card hover:border-primary/20 transition-colors duration-300 shadow-lg border border-border/50 rounded-2xl overflow-hidden">
-      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/80 rounded-tl-2xl"></div>
-      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/80 rounded-br-2xl"></div>
+    <Card 
+      onClick={onSelect}
+      className={cn(
+        "cursor-pointer relative h-full w-full flex flex-col justify-between bg-card hover:border-primary/20 transition-colors duration-300 shadow-lg border border-border/50 rounded-2xl overflow-hidden",
+        isSelected && "border-primary/20"
+      )}
+    >
+      {isSelected && (
+        <>
+          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/80 rounded-tl-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/80 rounded-br-2xl"></div>
+        </>
+      )}
 
       <CardHeader>
         <div className="flex justify-between items-start">

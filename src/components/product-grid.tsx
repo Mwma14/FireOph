@@ -3,9 +3,11 @@ import type { Product } from "@/lib/types";
 
 interface ProductGridProps {
   products: Product[];
+  selectedProductId: string | null;
+  onSelectProduct: (id: string | null) => void;
 }
 
-export default function ProductGrid({ products }: ProductGridProps) {
+export default function ProductGrid({ products, selectedProductId, onSelectProduct }: ProductGridProps) {
   if (products.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center text-center py-20">
@@ -18,7 +20,12 @@ export default function ProductGrid({ products }: ProductGridProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard 
+          key={product.id} 
+          product={product}
+          isSelected={selectedProductId === product.id}
+          onSelect={() => onSelectProduct(product.id === selectedProductId ? null : product.id)}
+        />
       ))}
     </div>
   );

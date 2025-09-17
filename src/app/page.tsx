@@ -10,6 +10,7 @@ import type { Operator, ProductCategory } from '@/lib/types';
 export default function Home() {
   const [selectedOperator, setSelectedOperator] = useState<Operator | 'All'>('All');
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'All'>('All');
+  const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
 
   const filteredProducts = useMemo(() => {
     return allProducts.filter(product => {
@@ -31,7 +32,11 @@ export default function Home() {
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
         />
-        <ProductGrid products={filteredProducts} />
+        <ProductGrid 
+          products={filteredProducts}
+          selectedProductId={selectedProductId}
+          onSelectProduct={setSelectedProductId}
+        />
       </div>
     </>
   );
