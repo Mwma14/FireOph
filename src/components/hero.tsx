@@ -9,8 +9,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grid-zinc-700/[0.2] [mask-image:linear-gradient(to_bottom,white_5%,transparent_100%)]"></div>
       
       {/* Neon Glows */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/30 rounded-full blur-[200px] animate-pulse-slow"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[200px] animate-pulse-slow animation-delay-3000"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-[200px] animate-pulse-slow"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[200px] animate-pulse-slow animation-delay-3000"></div>
 
       <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center justify-center text-center flex-1">
         <div className="flex-grow flex items-end pb-8">
