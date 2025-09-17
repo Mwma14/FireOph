@@ -8,6 +8,10 @@ export default function Hero() {
     <section className="relative w-full py-20 md:py-32 lg:py-40 overflow-hidden">
       <div className="absolute inset-0 bg-grid-zinc-700/[0.2] [mask-image:linear-gradient(to_bottom,white_5%,transparent_100%)]"></div>
       
+      {/* Neon Glows */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-[150px] animate-pulse-slow"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[150px] animate-pulse-slow animation-delay-3000"></div>
+
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative w-full max-w-lg h-64 lg:h-80">
           <SimWaveAnimation />
