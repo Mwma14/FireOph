@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[200px] animate-pulse-slow animation-delay-3000"></div>
 
       <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center justify-center text-center flex-1">
-        <div className="flex-grow flex items-center">
+        <div className="flex-grow flex items-end pb-8">
             <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-white">
                 Discover Operator Products
             </h1>
@@ -26,7 +26,7 @@ export default function Hero() {
                         <SimWaveAnimation />
                     </div>
                 </div>
-                <div className="relative bg-black/20 backdrop-blur-sm rounded-xl p-6">
+                <div className="relative bg-black/20 backdrop-blur-sm rounded-xl p-6 flex items-center justify-center min-h-[16rem] lg:min-h-[20rem]">
                     <p className="max-w-xl text-foreground/80 md:text-xl break-words mx-auto">
                     All your favorite telecom products from MPT, Ooredoo, Atom, and MyTel in one place. Instantly top-up data, minutes, and more.
                     </p>
