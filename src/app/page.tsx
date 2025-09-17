@@ -21,8 +21,8 @@ export default function Home() {
 
   return (
     <>
-      <Hero />
-      <div className="container px-4 md:px-6 py-12 md:py-16 lg:py-20">
+      {/* <Hero /> */}
+      <div className="container px-4 md:px-6 py-8 md:py-12 lg:py-16">
         <ProductFilters
           operators={OPERATORS}
           categories={PRODUCT_CATEGORIES}
