@@ -1,5 +1,5 @@
 import type { Product } from "@/lib/types";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import OperatorLogo from "./operator-logo";
 import { Separator } from "@/components/ui/separator";
@@ -20,12 +20,18 @@ export default function ProductCard({ product, isSelected, onSelect }: ProductCa
         isSelected && "border-primary/20"
       )}
     >
-      {isSelected && (
-        <>
-          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/80 rounded-tl-2xl"></div>
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/80 rounded-br-2xl"></div>
-        </>
-      )}
+      <div 
+        className={cn(
+          "absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/80 rounded-tl-2xl transition-all duration-300",
+          isSelected ? "opacity-100 -top-0 -left-0" : "opacity-0 -top-2 -left-2"
+        )}
+      />
+      <div 
+        className={cn(
+          "absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/80 rounded-br-2xl transition-all duration-300",
+          isSelected ? "opacity-100 -bottom-0 -right-0" : "opacity-0 -bottom-2 -right-2"
+        )}
+      />
 
       <CardHeader>
         <div className="flex justify-between items-start">
