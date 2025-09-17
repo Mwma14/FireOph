@@ -45,7 +45,10 @@ export default function ProductCard({ product, isSelected, onSelect }: ProductCa
         <Separator className="bg-border/50 mx-6" />
         <CardFooter className="flex justify-between items-center pt-6">
           <p className="text-xl font-bold text-primary">{product.price.toLocaleString()} <span className="text-sm font-normal">MMK</span></p>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-xl">Purchase</Button>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="sm">View Details</Button>
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-xl">Purchase</Button>
+          </div>
         </CardFooter>
       </div>
     </Card>
